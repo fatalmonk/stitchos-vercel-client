@@ -1,12 +1,14 @@
-{
-  "version": 2,
-  "framework": "vite",
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist",
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
-  ]
-}
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a//dev/null b/vercel.json
+index 0000000000000000000000000000000000000000..fbb8a4a753823fba1f3b6b69172d620fd78a304e 100644
+--- a//dev/null
++++ b/vercel.json
+@@ -0,0 +1,5 @@
++{
++  "version": 2,
++  "buildCommand": "npm run build",
++  "outputDirectory": "."
++}
+ 
+EOF
+)
