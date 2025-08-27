@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { --grad-brand: linear-gradient(90deg, #fdd338 50%, #e11a2b 50%, #e11a2b 66.33%, #000 66.33%, #000 82.66%, #1C6FE3 82.66%, #1C6FE3 100%); }
+.bg-brand-gradient { background: var(--grad-brand); }
+.text-gradient { background: var(--grad-brand); -webkit-background-clip: text; background-clip: text; color: transparent; }
